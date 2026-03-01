@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fergus - Organic comes knocking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lavender: '#E0DBF4',
+            cream: '#F9F5EE',
+            darkgreen: '#1C2B1A',
+            teal: '#58C4A5',
+          },
+          fontFamily: {
+            display: ['"Abril Fatface"', 'serif'],
+            script: ['Caveat', 'cursive'],
+            nunito: ['Nunito', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes ticker {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .ticker-track {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+
+    /* Scrollbar hide */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-white font-sans text-black antialiased overflow-x-hidden">
+
+  <!-- ─── Announcement Bar ─── -->
+  <div class="bg-darkgreen text-white text-xs text-center py-2 px-4 tracking-wide">
+    All orders from $75 and over are free! Visit us at <a href="#" class="underline">fergus.farm</a>
+  </div>
+
+  <!-- ─── Navigation ─── -->
+  <nav class="flex items-center justify-between px-8 py-3 border-b border-gray-100">
+    <!-- Logo (small in nav) -->
+    <a href="#" class="font-display text-xl leading-none">Fergus</a>
+
+    <!-- Center links -->
+    <div class="flex items-center gap-7 text-sm font-medium text-gray-800">
+      <a href="#" class="hover:text-black">Home</a>
+      <a href="#" class="flex items-center gap-0.5 hover:text-black">Pop <svg class="w-3 h-3 ml-0.5 mt-0.5" fill="none"
+          stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" />
+        </svg></a>
+      <a href="#" class="flex items-center gap-0.5 hover:text-black">Business <svg class="w-3 h-3 ml-0.5 mt-0.5"
+          fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" />
+        </svg></a>
+      <a href="#" class="flex items-center gap-0.5 hover:text-black">About <svg class="w-3 h-3 ml-0.5 mt-0.5"
+          fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" />
+        </svg></a>
+    </div>
+
+    <!-- Right links + Subscribe -->
+    <div class="flex items-center gap-5 text-sm text-gray-700">
+      <a href="#" class="hover:text-black">Blog</a>
+      <a href="#" class="hover:text-black">FAQ</a>
+      <a href="#" class="hover:text-black">Contact</a>
+      <a href="#" class="hover:text-black">FR</a>
+      <button class="bg-black text-white text-sm px-5 py-2 rounded-full hover:bg-gray-800 transition">Subscribe</button>
+    </div>
+  </nav>
+
+  <!-- ─── Hero: Big Fergus Logo ─── -->
+  <div class="text-center px-4 pt-2 pb-0 overflow-hidden leading-none">
+    <span class="font-display block"
+      style="font-size: clamp(80px, 16vw, 180px); line-height: 0.92; letter-spacing: -0.01em;">Fergus</span>
+  </div>
+
+  <!-- ─── Hero: Content Row ─── -->
+  <section class="flex items-center gap-8 px-12 pb-16 pt-4 max-w-screen-xl mx-auto">
+    <!-- Left: Lavender card -->
+    <div class="bg-lavender rounded-3xl p-9 w-[42%] flex-shrink-0 self-stretch flex flex-col justify-center"
+      style="min-height: 260px;">
+      <h2 class="font-nunito font-black text-[2.25rem] leading-tight mb-4 tracking-tight">Organic comes<br>knocking</h2>
+      <p class="text-sm text-gray-700 leading-relaxed mb-7">
+        Fergus is a friendly online grocery store offering easy and convenient delivery without a subscription plan.
+        With Fergus, eating a variety of organic food year-round is as simple as hello.
+      </p>
+      <a href="#" class="text-sm font-semibold border-b border-black pb-0.5 self-start">Shop now →</a>
+    </div>
+
+    <!-- Right: Floating food illustrations (SVG) -->
+    <div class="flex-1 relative" style="height: 320px;">
+      <!-- Yellow butternut squash/gourd — top center -->
+      <svg class="absolute" style="top: 0; left: 18%; width: 190px; height: 150px;" viewBox="0 0 190 150" fill="none">
+        <ellipse cx="95" cy="80" rx="70" ry="55" fill="#F5C830" />
+        <ellipse cx="95" cy="60" rx="45" ry="38" fill="#F0B820" />
+        <ellipse cx="115" cy="42" rx="22" ry="18" fill="#E8A810" />
+        <rect x="90" y="8" width="10" height="28" rx="5" fill="#6A4A10" />
+        <line x1="95" y1="18" x2="112" y2="10" stroke="#5A8A20" stroke-width="3" stroke-linecap="round" />
+      </svg>
+
+      <!-- Green cucumber/zucchini — center right -->
+      <svg class="absolute" style="top: 55px; right: 8%; width: 160px; height: 110px;" viewBox="0 0 160 110"
+        fill="none">
+        <ellipse cx="80" cy="55" rx="72" ry="38" fill="#7AC848" transform="rotate(-12 80 55)" />
+        <ellipse cx="80" cy="55" rx="58" ry="28" fill="#6AB838" transform="rotate(-12 80 55)" />
+        <ellipse cx="30" cy="40" rx="14" ry="18" fill="#5AA828" transform="rotate(-12 30 40)" />
+        <line x1="30" y1="40" x2="80" y2="55" stroke="#4A9818" stroke-width="2.5" stroke-linecap="round" />
+      </svg>
+
+      <!-- Small red tomato — center overlap -->
+      <svg class="absolute" style="top: 118px; left: 40%; width: 72px; height: 72px;" viewBox="0 0 72 72" fill="none">
+        <circle cx="36" cy="40" r="28" fill="#E83030" />
+        <circle cx="36" cy="40" r="22" fill="#D02020" />
+        <path d="M28 16 Q36 8 44 16" stroke="#3A8020" stroke-width="3" fill="none" stroke-linecap="round" />
+        <line x1="36" y1="8" x2="36" y2="20" stroke="#3A8020" stroke-width="3" stroke-linecap="round" />
+      </svg>
+
+      <!-- Watermelon slice with white flower — bottom right -->
+      <svg class="absolute" style="bottom: 0; right: 5%; width: 200px; height: 155px;" viewBox="0 0 200 155"
+        fill="none">
+        <!-- Watermelon slice -->
+        <path d="M10 130 Q100 0 190 130 Z" fill="#F07090" />
+        <path d="M25 130 Q100 20 175 130 Z" fill="#E85070" />
+        <path d="M10 130 Q100 10 190 130 Q190 140 10 140 Z" fill="#4A9830" />
+        <!-- Seeds -->
+        <ellipse cx="70" cy="100" rx="5" ry="7" fill="#1A1A1A" transform="rotate(-10 70 100)" />
+        <ellipse cx="100" cy="85" rx="5" ry="7" fill="#1A1A1A" />
+        <ellipse cx="130" cy="100" rx="5" ry="7" fill="#1A1A1A" transform="rotate(10 130 100)" />
+        <!-- White daisy flower on top -->
+        <g transform="translate(100, 18)">
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(0)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(45)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(90)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(135)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(180)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(225)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(270)" />
+          <ellipse cx="0" cy="-12" rx="5" ry="9" fill="white" transform="rotate(315)" />
+          <circle cx="0" cy="0" r="7" fill="#F5D020" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ─── How does it work? ─── -->
+  <section class="py-14 px-12 text-center max-w-screen-lg mx-auto">
+    <h2 class="font-script font-bold text-5xl mb-12">How does it work?</h2>
+    <div class="grid grid-cols-4 gap-8 mb-10">
+      <!-- Step 01 -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl" style="background:#EDE8F8;">🛒
+        </div>
+        <span class="text-xs font-semibold text-gray-400 tracking-wider">01</span>
+        <p class="text-sm text-gray-700 leading-snug">We select organic products for our online market</p>
+      </div>
+      <!-- Step 02 -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl" style="background:#E8F4E0;">📋
+        </div>
+        <span class="text-xs font-semibold text-gray-400 tracking-wider">02</span>
+        <p class="text-sm text-gray-700 leading-snug">You select items for your order and choose the frequency</p>
+      </div>
+      <!-- Step 03 -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl" style="background:#F8F0E0;">🚚
+        </div>
+        <span class="text-xs font-semibold text-gray-400 tracking-wider">03</span>
+        <p class="text-sm text-gray-700 leading-snug">We deliver your order to your door</p>
+      </div>
+      <!-- Step 04 -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-4xl" style="background:#FFF0E0;">😋
+        </div>
+        <span class="text-xs font-semibold text-gray-400 tracking-wider">04</span>
+        <p class="text-sm text-gray-700 leading-snug">You enjoy the deliciousness!</p>
+      </div>
+    </div>
+    <button
+      class="bg-black text-white px-10 py-3 rounded-full font-medium text-sm hover:bg-gray-800 transition">Shop</button>
+  </section>
+
+  <!-- ─── Featured Product Ticker ─── -->
+  <div class="bg-darkgreen text-white py-3 overflow-hidden">
+    <div class="ticker-track text-sm font-medium gap-0">
+      <!-- Doubled for seamless loop -->
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+      <span class="px-8">🌿 This week's featured product</span>
+      <span class="px-2 opacity-40">✦</span>
+    </div>
+  </div>
+
+  <!-- ─── Just in time for fall season ─── -->
+  <section class="flex items-stretch gap-6 px-12 my-16 max-w-screen-xl mx-auto">
+    <!-- Left: text -->
+    <div class="flex-1 flex flex-col justify-center py-12">
+      <h2 class="font-nunito font-black text-4xl leading-tight mb-5 tracking-tight">
+        Just in time<br>for fall season!
+      </h2>
+      <div class="flex items-center gap-3 mb-6">
+        <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full">-57%</span>
+        <span class="text-xs text-gray-500">limited time offer</span>
+      </div>
+      <button
+        class="bg-black text-white px-7 py-2.5 rounded-full font-medium text-sm self-start hover:bg-gray-800 transition">Shop
+        now</button>
+    </div>
+    <!-- Right: cranberries image -->
+    <div class="flex-1 rounded-3xl overflow-hidden" style="max-height: 340px;">
+      <img src="https://placehold.co/560x340/BB2020/ffffff?text=Fresh+Cranberries" alt="Fall cranberries"
+        class="w-full h-full object-cover">
+    </div>
+  </section>
+
+  <!-- ─── Product Grid ─── -->
+  <section class="px-12 pb-4 max-w-screen-xl mx-auto">
+    <div class="grid grid-cols-4 gap-5">
+
+      <!-- Card 1: Pumpkin -->
+      <div class="rounded-2xl border border-gray-100 p-4 hover:shadow-sm transition">
+        <div class="rounded-xl overflow-hidden mb-3" style="height: 170px; background:#F2A96A;">
+          <img src="https://placehold.co/280x170/D47820/F5D090?text=Pumpkin" alt="Organic Pumpkin"
+            class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-medium text-sm leading-snug mb-1">Organic Pumpkin from Quebec</h3>
+        <p class="text-xs text-gray-400 mb-3">1.4kg / 2.5 kg</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold">from $3.99</span>
+          <button class="bg-black text-white text-xs px-4 py-1.5 rounded-full hover:bg-gray-800 transition">Buy</button>
+        </div>
+      </div>
+
+      <!-- Card 2: Limes -->
+      <div class="rounded-2xl border border-gray-100 p-4 hover:shadow-sm transition">
+        <div class="rounded-xl overflow-hidden mb-3" style="height: 170px; background:#6AB840;">
+          <img src="https://placehold.co/280x170/4A8A20/C8E890?text=Limes" alt="Organic limes"
+            class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-medium text-sm leading-snug mb-1">Organic limes</h3>
+        <p class="text-xs text-gray-400 mb-3">1 lb / 3 lbs</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold">from $3.99</span>
+          <button class="bg-black text-white text-xs px-4 py-1.5 rounded-full hover:bg-gray-800 transition">Buy</button>
+        </div>
+      </div>
+
+      <!-- Card 3: Ginger -->
+      <div class="rounded-2xl border border-gray-100 p-4 hover:shadow-sm transition">
+        <div class="rounded-xl overflow-hidden mb-3" style="height: 170px; background:#C4A882;">
+          <img src="https://placehold.co/280x170/9A7840/E8D090?text=Ginger" alt="Organic ginger"
+            class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-medium text-sm leading-snug mb-1">Organic Young Fresh Ginger from Quebec</h3>
+        <p class="text-xs text-gray-400 mb-3">1.6lb / 113g / 1 kg</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold">from $2.99</span>
+          <button class="bg-black text-white text-xs px-4 py-1.5 rounded-full hover:bg-gray-800 transition">Buy</button>
+        </div>
+      </div>
+
+      <!-- Card 4: Garlic/Gar Farm -->
+      <div class="rounded-2xl border border-gray-100 p-4 hover:shadow-sm transition">
+        <div class="rounded-xl overflow-hidden mb-3" style="height: 170px; background:#E8B4A0;">
+          <img src="https://placehold.co/280x170/C07050/F0C090?text=Garlic" alt="Organic Gar farm"
+            class="w-full h-full object-cover">
+        </div>
+        <h3 class="font-medium text-sm leading-snug mb-1">Organic Gar farm</h3>
+        <p class="text-xs text-gray-400 mb-3">1 lb / 3 lbs</p>
+        <div class="flex items-center justify-between">
+          <span class="text-sm font-semibold">from $4.99</span>
+          <button class="bg-black text-white text-xs px-4 py-1.5 rounded-full hover:bg-gray-800 transition">Buy</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Flyer link -->
+    <div class="text-center mt-7 mb-2">
+      <a href="#" class="text-sm font-medium border-b border-black pb-0.5">Flyer</a>
+    </div>
+  </section>
+
+  <!-- ─── Our Impact ─── -->
+  <section class="flex items-center gap-14 px-12 py-16 max-w-screen-xl mx-auto">
+    <!-- Left: circular image with teal blob behind it -->
+    <div class="flex-shrink-0 relative" style="width: 340px; height: 330px;">
+      <!-- Teal blob background -->
+      <div class="absolute bg-teal rounded-[48px]" style="width: 270px; height: 270px; bottom: 0; left: 0; z-index: 0;">
+      </div>
+      <!-- Circular photo -->
+      <div class="absolute rounded-full overflow-hidden shadow-sm"
+        style="width: 300px; height: 300px; top: 0; left: 30px; z-index: 1;">
+        <img src="https://placehold.co/300x300/C8A878/E8D0B0?text=Impact" alt="Organic impact"
+          class="w-full h-full object-cover">
+      </div>
+    </div>
+    <!-- Right: text -->
+    <div class="flex-1">
+      <h2 class="font-nunito font-black text-4xl mb-5 tracking-tight">Our impact</h2>
+      <p class="text-sm text-gray-600 leading-relaxed mb-5">
+        Respect for natural cycles enhances biodiversity. Land use free of pesticides, fungicides and herbicides
+        promotes sustainability. Maintaining economic viability is good for rural areas. Here's some of the evidence
+        that organic farming plays a crucial role when it comes to the health of our planet.
+      </p>
+      <a href="#" class="text-sm font-semibold border-b border-black pb-0.5">Read more →</a>
+    </div>
+  </section>
+
+  <!-- ─── Our Partners ─── -->
+  <section class="bg-cream py-16">
+    <div class="flex items-center gap-14 px-12 max-w-screen-xl mx-auto">
+      <!-- Left: text -->
+      <div class="flex-1">
+        <h2 class="font-nunito font-black text-4xl mb-5 tracking-tight leading-tight">Our<br>partners</h2>
+        <p class="text-sm text-gray-600 leading-relaxed mb-5">
+          Our network of local and international organic producers allows us to offer delicious and diverse products
+          year-round.
+        </p>
+        <a href="#" class="text-sm font-semibold border-b border-black pb-0.5">Read more →</a>
+      </div>
+      <!-- Right: circle image -->
+      <div class="flex-shrink-0">
+        <div class="rounded-full overflow-hidden" style="width: 300px; height: 300px;">
+          <img src="https://placehold.co/300x300/8A7050/ffffff?text=Partners" alt="Partners"
+            class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Testimonials ─── -->
+  <section class="py-16 px-12 text-center max-w-2xl mx-auto">
+    <h2 class="font-nunito font-black text-3xl mb-10 tracking-tight">Our clients share the love</h2>
+    <p class="text-base text-gray-700 italic leading-relaxed mb-8">
+      "Thank you so much for the organic fruit and vegetables and your excellent home delivery service. I love Fergus!"
+    </p>
+    <!-- Dot navigation -->
+    <div class="flex items-center justify-center gap-2 mb-10">
+      <span class="w-2.5 h-2.5 rounded-full bg-black inline-block"></span>
+      <span class="w-2.5 h-2.5 rounded-full bg-gray-300 inline-block"></span>
+      <span class="w-2.5 h-2.5 rounded-full bg-gray-300 inline-block"></span>
+    </div>
+    <button
+      class="bg-black text-white px-10 py-3 rounded-full font-medium text-sm hover:bg-gray-800 transition">Shop</button>
+  </section>
+
+  <!-- ─── Shop CTA / Illustrated Section ─── -->
+  <section class="relative bg-cream py-24 overflow-hidden" style="min-height: 320px;">
+    <!-- Large purple flower (left side) -->
+    <svg class="absolute" style="left: 8%; top: 10%; width: 120px; height: 120px;" viewBox="0 0 120 120" fill="none">
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(0 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(45 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(90 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(135 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#B8A0D0" transform="rotate(180 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#B8A0D0" transform="rotate(225 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(270 60 60)" />
+      <ellipse cx="60" cy="20" rx="14" ry="20" fill="#C8B4E0" transform="rotate(315 60 60)" />
+      <circle cx="60" cy="60" r="16" fill="#F0D060" />
+    </svg>
+
+    <!-- Pear (lower left-center) -->
+    <svg class="absolute" style="left: 30%; bottom: 12%; width: 70px; height: 90px;" viewBox="0 0 70 90" fill="none">
+      <ellipse cx="35" cy="58" rx="26" ry="30" fill="#B8CC50" />
+      <ellipse cx="35" cy="35" rx="16" ry="20" fill="#C8DC60" />
+      <rect x="33" y="5" width="4" height="18" rx="2" fill="#6A4A20" />
+      <line x1="35" y1="12" x2="48" y2="6" stroke="#5A8A30" stroke-width="2.5" stroke-linecap="round" />
+    </svg>
+
+    <!-- Green leaf / herb (right side) -->
+    <svg class="absolute" style="right: 10%; bottom: 15%; width: 80px; height: 80px;" viewBox="0 0 80 80" fill="none">
+      <path d="M40 70 Q10 50 15 20 Q30 5 50 10 Q70 15 65 40 Q60 60 40 70Z" fill="#6AB840" />
+      <path d="M40 70 Q40 40 40 10" stroke="#4A8820" stroke-width="2" stroke-linecap="round" />
+    </svg>
+
+    <!-- Small teal circle accent -->
+    <div class="absolute rounded-full bg-teal opacity-40" style="width: 50px; height: 50px; right: 22%; top: 20%;">
+    </div>
+    <div class="absolute rounded-full bg-lavender opacity-60"
+      style="width: 35px; height: 35px; left: 22%; bottom: 25%;"></div>
+
+    <!-- Center: "Fergus" wordmark -->
+    <div class="relative text-center z-10">
+      <div class="font-display leading-none" style="font-size: clamp(56px, 8vw, 100px);">Fergus</div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="bg-white border-t border-gray-100 pt-14 pb-6 px-12">
+    <div class="max-w-screen-xl mx-auto">
+      <!-- Footer columns -->
+      <div class="grid grid-cols-5 gap-10 mb-12">
+
+        <!-- Col 1: Logo -->
+        <div class="col-span-1">
+          <div class="font-display text-2xl mb-4">Fergus</div>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Organic grocery delivery in Quebec.
+          </p>
+        </div>
+
+        <!-- Col 2 -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Shop</h4>
+          <ul class="space-y-2.5 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-black">How does it work?</a></li>
+            <li><a href="#" class="hover:text-black">Our partners</a></li>
+            <li><a href="#" class="hover:text-black">Our impact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Company</h4>
+          <ul class="space-y-2.5 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-black">Blog</a></li>
+            <li><a href="#" class="hover:text-black">FAQ</a></li>
+            <li><a href="#" class="hover:text-black">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Legal</h4>
+          <ul class="space-y-2.5 text-sm text-gray-700">
+            <li><a href="#" class="hover:text-black">Pricing Policy</a></li>
+            <li><a href="#" class="hover:text-black">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-black">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Social -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Follow us</h4>
+          <div class="flex gap-2.5 flex-wrap">
+            <!-- Facebook -->
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition text-xs font-bold text-gray-600">f</a>
+            <!-- Instagram -->
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition text-xs font-bold text-gray-600">in</a>
+            <!-- Pinterest -->
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition text-xs font-bold text-gray-600">p</a>
+            <!-- YouTube -->
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition text-xs font-bold text-gray-600">yt</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="flex items-center justify-between border-t border-gray-100 pt-5 text-xs text-gray-400">
+        <div class="font-display text-2xl text-black">Fergus</div>
+        <span>© Fergus 2022</span>
+        <a href="#" class="hover:text-black transition">Design credits</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
